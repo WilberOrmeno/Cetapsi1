@@ -7,6 +7,9 @@
 
 </head>
 <body>
+<div style="height: 40px; background-color: skyblue; top: 0;">
+    <p style="font-size: 25px;">Sistema de matrícula - Periodo 2018</p>
+</div>
 <nav class="navbar navbar-inverse" style="border-radius: 0px;">
     <div class="container-fluid">
         <div class="navbar-header">
