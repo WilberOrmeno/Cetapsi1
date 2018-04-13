@@ -2,12 +2,8 @@
 <html lang="es">
 
 <head>
-    <?php
-    include("cabecera.php")
-
-    ?>
     <meta charset="UTF-8">
-    <title>Busqueda General</title>
+    <title>SISTEMA DE MATRÍCULA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -54,7 +50,7 @@
             <label style="font-family: 'Tw Cen MT'; font-weight: bold; color: red; font-size: 50px ;">CETAPSI</label>
         </div>
     </div>
-    <br><br><br>
+    <br><br>
     <form id="msform" action="autenticacion.php" method="POST">
         <input type="text" id="textuser" name="user" placeholder="Usuario" autofocus required/>
         <i class="fa fa-user"></i>
@@ -64,9 +60,5 @@
         <button id="login-password" type="submit" class="btn btn-lg" style="background-color: black; color: white;" onclick="buscarUsuario()">Ingresar</button>
     </form>
 </div>
-
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/fRegistro.js"></script>
 </body>
 </html>
