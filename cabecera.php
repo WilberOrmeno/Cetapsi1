@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+include("conexion.php");
+$con=conectar();
+$sql="SELECT * FROM periodo";
+$result=mysqli_query($con,$sql);
+$periodo=mysqli_fetch_array($result);
+?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -8,7 +15,7 @@
 </head>
 <body>
 <div style="height: 40px; background-color: skyblue; top: 0;">
-    <p style="font-size: 25px;">Sistema de matrícula - Periodo 2018</p>
+    <p style="font-size: 25px;">Sistema de matrícula - Periodo <?php echo $periodo[0]?></p>
 </div>
 <nav class="navbar navbar-inverse" style="border-radius: 0px;">
     <div class="container-fluid">
@@ -41,6 +48,8 @@
                     </ul>
                 </li>
             </ul>
+
+
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Periodo <span class="caret"></span></a>
@@ -50,10 +59,11 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
+                <li ><a href="../cerrarSesion.php"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesion</a></li>
             </ul>
         </div>
     </div>
 </nav>
+
 </body>
 </html>

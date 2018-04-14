@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+    include("../cabecera.php");
+    session_start();
+    include ("../bloqueDeSeguridad.php");
+?>
 <head>
-    <?php
-    include("..\cabecera.php")
-    ?>
     <meta charset="UTF-8">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">

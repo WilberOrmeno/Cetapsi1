@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+<?php
+session_start();
+if ($_SESSION["autenticado"] != "SI") {
+//si no existe, va a la página de autenticacion
+    header("Location: index.php");
+    exit();
+}
+?>
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -15,8 +23,8 @@
             left: 50%;
             width: 500px;
             height: 500px;
-            margin-top: -250px; /* Half the height */
-            margin-left: -250px; /* Half the width */
+            margin-top: -250px;
+            margin-left: -250px;
         }
     </style>
     <nav class="navbar navbar-inverse navbar-fixed-top" style="border-radius: 0px;">
@@ -59,7 +67,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Cerrar sesión</a></li>
+                    <li ><a href="cerrarSesion.php"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesion</a></li>
                 </ul>
             </div>
         </div>
